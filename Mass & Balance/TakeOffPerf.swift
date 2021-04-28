@@ -32,7 +32,7 @@ struct SelectedRunway {
     
     var intx: [intersect]?
     
-    init(name: String? = nil, bearing: Int? = nil, slope: Float? = nil, tora: Int? = nil, toda: Int? = nil, asda: Int? = nil, lda: Int? = nil) {
+    init(name: String? = nil, bearing: Int? = nil, slope: Float? = nil, tora: Int? = nil, toda: Int? = nil, asda: Int? = nil, lda: Int? = nil, intx: [intersect]? = nil) {
         self.name = name
         self.bearing = bearing
         self.slope = slope
@@ -40,6 +40,7 @@ struct SelectedRunway {
         self.toda = toda
         self.asda = asda
         self.lda = lda
+        self.intx = intx
     }
 }
 
@@ -51,6 +52,9 @@ struct TakeOffPerf: View {
     
     @State var selAirport = SelectedAirport()
     @State var selRunway = SelectedRunway()
+    
+    @State var fullLength = true
+    @State var intersect = ""
     
     var body: some View {
         Form {
@@ -68,6 +72,8 @@ struct TakeOffPerf: View {
                                 performance.tora = ""
                                 performance.toda = ""
                                 performance.asda = ""
+                                fullLength = true
+                                intersect = ""
                             }) {
                                 Text("\(airport.icao) - \(airport.name)")
                             }
@@ -79,6 +85,8 @@ struct TakeOffPerf: View {
                             performance.tora = ""
                             performance.toda = ""
                             performance.asda = ""
+                            fullLength = true
+                            intersect = ""
                         }) {
                             Text("Clear")
                         }
@@ -99,15 +107,12 @@ struct TakeOffPerf: View {
                         Menu {
                             ForEach(selAirport.runways!) { runway in
                                 Button(action: {
-                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing)
+                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing, intx: runway.intx)
                                     performance.tora = String(runway.tora)
                                     performance.toda = String(runway.toda)
                                     performance.asda = String(runway.asda)
-                                    if runway.intx!.count > 0 {
-                                        print(runway.intx![0].name)
-                                    } else {
-                                        print("No intersections available.")
-                                    }
+                                    fullLength = true
+                                    intersect = ""
                                 }) {
                                     Text(runway.name)
                                 }
@@ -123,11 +128,42 @@ struct TakeOffPerf: View {
                         }.frame(width: 150, alignment: .trailing)
                     }
                 }
-                if selRunway.intx != nil {
+                if (selRunway.intx?.count ?? 0) > 0 {
                     HStack {
                         Text("Intersection")
                         Spacer()
-                        Text("Placeholder for now")
+                        Menu {
+                            ForEach(selRunway.intx!) { intx in
+                                Button(action: {
+                                    print(Int(performance.tora)!)
+                                    print(intx.adjust)
+                                    performance.tora = String(Int(performance.tora)! - intx.adjust)
+                                    performance.toda = String(Int(performance.toda)! - intx.adjust)
+                                    performance.asda = String(Int(performance.asda)! - intx.adjust)
+                                    fullLength = false
+                                    intersect = intx.name
+                                }) {
+                                    Text(intx.name)
+                                }
+                            }
+                            Button(action: {
+                                fullLength = true
+                                intersect = ""
+                            }) {
+                                Text("Full Length")
+                            }
+                        } label: {
+                            if fullLength == true {
+                                Text("Full Length")
+                                    .frame(width: 150, alignment: .trailing)
+                            } else if intersect != "" {
+                                Text("\(intersect) Intersection")
+                                    .frame(width: 150, alignment: .trailing)
+                            } else {
+                                Text("Select Intersection (Optional)")
+                                    .frame(width: 150, alignment: .trailing)
+                            }
+                        }.frame(width: 150, alignment: .trailing)
                     }
                 }
             }
