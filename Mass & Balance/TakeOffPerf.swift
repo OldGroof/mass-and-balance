@@ -69,6 +69,7 @@ struct TakeOffPerf: View {
                                 selAirport = SelectedAirport(icao: airport.icao, name: airport.name, elevation: airport.elevation, runways: airport.runways)
                                 selRunway = SelectedRunway()
                                 performance.elevDep = String(selAirport.elevation ?? 0)
+                                performance.slopeDep = ""
                                 performance.tora = ""
                                 performance.toda = ""
                                 performance.asda = ""
@@ -81,7 +82,8 @@ struct TakeOffPerf: View {
                         Button(action: {
                             selAirport = SelectedAirport()
                             selRunway = SelectedRunway()
-                            performance.elevDep = String(selAirport.elevation ?? 0)
+                            performance.elevDep = ""
+                            performance.slopeDep = ""
                             performance.tora = ""
                             performance.toda = ""
                             performance.asda = ""
@@ -107,10 +109,11 @@ struct TakeOffPerf: View {
                         Menu {
                             ForEach(selAirport.runways!) { runway in
                                 Button(action: {
-                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing, intx: runway.intx)
+                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing, slope: runway.slope, tora: runway.tora, toda: runway.toda, asda: runway.asda, intx: runway.intx)
                                     performance.tora = String(runway.tora)
                                     performance.toda = String(runway.toda)
                                     performance.asda = String(runway.asda)
+                                    performance.slopeDep = String(runway.slope)
                                     fullLength = true
                                     intersect = ""
                                 }) {
@@ -135,11 +138,9 @@ struct TakeOffPerf: View {
                         Menu {
                             ForEach(selRunway.intx!) { intx in
                                 Button(action: {
-                                    print(Int(performance.tora)!)
-                                    print(intx.adjust)
-                                    performance.tora = String(Int(performance.tora)! - intx.adjust)
-                                    performance.toda = String(Int(performance.toda)! - intx.adjust)
-                                    performance.asda = String(Int(performance.asda)! - intx.adjust)
+                                    performance.tora = String((selRunway.tora ?? 0) - intx.adjust)
+                                    performance.toda = String((selRunway.toda ?? 0) - intx.adjust)
+                                    performance.asda = String((selRunway.asda ?? 0) - intx.adjust)
                                     fullLength = false
                                     intersect = intx.name
                                 }) {
@@ -149,6 +150,9 @@ struct TakeOffPerf: View {
                             Button(action: {
                                 fullLength = true
                                 intersect = ""
+                                performance.tora = String(selRunway.tora ?? 0)
+                                performance.toda = String(selRunway.toda ?? 0)
+                                performance.asda = String(selRunway.asda ?? 0)
                             }) {
                                 Text("Full Length")
                             }
@@ -166,7 +170,7 @@ struct TakeOffPerf: View {
                         }.frame(width: 150, alignment: .trailing)
                     }
                 }
-            }
+            } // Airport Select
             Section() {
                 HStack {
                     Text("Flaps 25°")

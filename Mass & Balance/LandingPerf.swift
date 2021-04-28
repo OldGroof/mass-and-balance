@@ -8,12 +8,77 @@
 import SwiftUI
 
 struct LandingPerf: View {
-    
+    @ObservedObject var airports = LoadAirport()
     @ObservedObject var performance: Calculations
     @ObservedObject var settings = Settings()
     
+    @State var selAirport = SelectedAirport()
+    @State var selRunway = SelectedRunway()
+    
     var body: some View {
         Form {
+            Section() {
+                HStack {
+                    Text("Airport")
+                        .font(.callout)
+                    Spacer()
+                    Menu {
+                        ForEach(airports.json) { airport in
+                            Button(action: {
+                                selAirport = SelectedAirport(icao: airport.icao, name: airport.name, elevation: airport.elevation, runways: airport.runways)
+                                selRunway = SelectedRunway()
+                                performance.elevArr = String(selAirport.elevation ?? 0)
+                                performance.slopeArr = ""
+                                performance.lda = ""
+                            }) {
+                                Text("\(airport.icao) - \(airport.name)")
+                            }
+                        }
+                        Button(action: {
+                            selAirport = SelectedAirport()
+                            selRunway = SelectedRunway()
+                            performance.elevArr = ""
+                            performance.slopeArr = ""
+                            performance.lda = ""
+                        }) {
+                            Text("Clear")
+                        }
+                    } label: {
+                        if selAirport.icao == nil {
+                            Text("Select Airport")
+                                .frame(width: 200, alignment: .trailing)
+                        } else {
+                            Text("\(selAirport.icao ?? "") - \(selAirport.name ?? "")")
+                                .frame(width: 200, alignment: .trailing)
+                        }
+                    }.frame(width: 200, alignment: .trailing)
+                }
+                if selAirport.icao != nil {
+                    HStack {
+                        Text("Runway")
+                        Spacer()
+                        Menu {
+                            ForEach(selAirport.runways!) { runway in
+                                Button(action: {
+                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing, slope: runway.slope, lda: runway.lda, intx: runway.intx)
+                                    performance.lda = String(runway.lda)
+                                    performance.slopeArr = String(runway.slope)
+                                }) {
+                                    Text(runway.name)
+                                }
+                            }
+                        } label: {
+                            if selRunway.name == "" {
+                                Text("Select Runway")
+                                    .frame(width: 150, alignment: .trailing)
+                            } else {
+                                Text("Runway \(selRunway.name ?? "")")
+                                    .frame(width: 150, alignment: .trailing)
+                            }
+                        }.frame(width: 150, alignment: .trailing)
+                    }
+                }
+            } // Airport Select
             Section() {
                 HStack {
                     Text("Elevation")
