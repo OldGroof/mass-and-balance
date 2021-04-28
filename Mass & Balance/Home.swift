@@ -114,26 +114,6 @@ struct Home: View {
                         }.onDelete(perform: removeSessions)
                     } // Saved Flights
                     Section() {
-                        HStack {
-                            Image(systemName: "checkmark.circle")
-                            Text("Checklists")
-                        }
-                        NavigationLink(destination: NonNormChecklists()) {
-                            HStack{
-                                Image(systemName: "exclamationmark.octagon.fill")
-                                    .padding(2)
-                                Text("Piper QRH")
-                            }
-                        }
-                        NavigationLink(destination: NormChecklists()) {
-                            HStack {
-                                Image(systemName: "text.badge.checkmark")
-                                    .padding(2)
-                                Text("Piper Normal Checklist")
-                            }
-                        }
-                    } // Checklists
-                    Section() {
                         HStack{
                             Image(systemName: "cloud")
                             Text("Weather")
@@ -252,6 +232,26 @@ struct Home: View {
                             Spacer()
                         }.padding(4)
                     } // NOTAMS
+                    Section() {
+                        HStack {
+                            Image(systemName: "checkmark.circle")
+                            Text("Checklists")
+                        }
+                        NavigationLink(destination: NonNormChecklists()) {
+                            HStack{
+                                Image(systemName: "exclamationmark.octagon.fill")
+                                    .padding(2)
+                                Text("Piper QRH")
+                            }
+                        }
+                        // NavigationLink(destination: NormChecklists()) {
+                        //     HStack {
+                        //         Image(systemName: "text.badge.checkmark")
+                        //            .padding(2)
+                        //         Text("Piper Normal Checklist")
+                        //     }
+                        // }
+                    } // Checklists
                 }.listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading:
