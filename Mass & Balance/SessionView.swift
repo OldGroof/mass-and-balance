@@ -17,14 +17,12 @@ struct SessionView: View {
     
     @State var EGTCm:String = "METAR here plz"
     @State var EGTCt:String = "No TAF for you!"
-    @State var LPMTm:String = "METAR here plz"
-    @State var LPMTt:String = "No TAF for you!"
-    @State var LEBZm:String = "METAR here plz"
-    @State var LEBZt:String = "No TAF for you!"
-    @State var LPMRm:String = "METAR here plz"
-    @State var LPMRt:String = "No TAF for you!"
-    @State var LPBJm:String = "METAR here plz"
-    @State var LPBJt:String = "No TAF for you!"
+    @State var EGSCm:String = "METAR here plz"
+    @State var EGSCt:String = "No TAF for you!"
+    @State var EGTKm:String = "METAR here plz"
+    @State var EGTKt:String = "No TAF for you!"
+    @State var EGBJm:String = "METAR here plz"
+    @State var EGBJt:String = "No TAF for you!"
     
     var body: some View {
         Form {
@@ -36,10 +34,9 @@ struct SessionView: View {
                     Button(action: {
                         metar()
                         EGTCtaf()
-                        // LPMTtaf()
-                        // LEBZtaf()
-                        // LPMRtaf()
-                        // LPBJtaf()
+                        EGSCtaf()
+                        EGTKtaf()
+                        EGBJtaf()
                     }) {
                         Image(systemName: "arrow.clockwise")
                     }
@@ -51,7 +48,7 @@ struct SessionView: View {
                             Spacer()
                         }
                         Spacer()
-                    }.frame(width: 95)
+                    }.frame(width: 130)
                     VStack(alignment: .leading) {
                         Text(EGTCm)
                             .foregroundColor(.gray)
@@ -59,71 +56,55 @@ struct SessionView: View {
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
-                } // Lisbon
+                } // Cranfield
                 HStack {
                     VStack{
                         HStack {
-                            Text("Montijo")
+                            Text("Cambridge")
                             Spacer()
                         }
                         Spacer()
-                    }.frame(width: 95)
+                    }.frame(width: 130)
                     VStack(alignment: .leading) {
-                        Text(LPMTm)
+                        Text(EGSCm)
                             .foregroundColor(.gray)
-                        Text("TAF \(LPMTt)")
+                        Text("TAF \(EGSCt)")
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
-                } // Montijo
+                } // Cambridge
                 HStack {
                     VStack{
                         HStack {
-                            Text("Badajoz")
+                            Text("Oxford")
                             Spacer()
                         }
                         Spacer()
-                    }.frame(width: 95)
+                    }.frame(width: 130)
                     VStack(alignment: .leading) {
-                        Text(LEBZm)
+                        Text(EGTKm)
                             .foregroundColor(.gray)
-                        Text("TAF \(LEBZt)")
+                        Text("TAF \(EGTKt)")
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
-                } // Badajoz
+                } // Oxford
                 HStack {
                     VStack {
                         HStack {
-                            Text("Monte Real")
+                            Text("Gloucestershire")
                             Spacer()
                         }
                         Spacer()
-                    }.frame(width: 95)
+                    }.frame(width: 130)
                     VStack(alignment: .leading) {
-                        Text(LPMRm)
+                        Text(EGBJm)
                             .foregroundColor(.gray)
-                        Text("TAF \(LPMRt)")
+                        Text("TAF \(EGBJt)")
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
-                } // Monte Real
-                HStack {
-                    VStack {
-                        HStack {
-                            Text("Beja")
-                            Spacer()
-                        }
-                        Spacer()
-                    }.frame(width: 95)
-                    VStack(alignment: .leading) {
-                        Text(LPBJm)
-                            .foregroundColor(.gray)
-                        Text("TAF \(LPBJt)")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    }
-                } // Beja
+                } // Gloucestershire
                 Button(action: {
                     openURL(URL(string: "http://www.metoffice.gov.uk/premium/generalaviation/#/aerodromes")!)
                 }) {
@@ -1019,16 +1000,15 @@ struct SessionView: View {
         .onAppear() {
             metar()
             EGTCtaf()
-            // LPMTtaf()
-            // LEBZtaf()
-            // LPMRtaf()
-            // LPBJtaf()
+            EGTKtaf()
+            EGSCtaf()
+            EGBJtaf()
         }
     }
     
     func metar() {
         
-        let url = URL(string: "https://api.checkwx.com/metar/LPMT,LPMR,LEBZ,EGTC,LPBJ")!
+        let url = URL(string: "https://api.checkwx.com/metar/EGTC,EGSC,EGBJ,EGTK")!
         var request = URLRequest(url: url)
         request.addValue("6f5de2372b0543bc9959c51695", forHTTPHeaderField: "X-API-Key")
         
@@ -1043,11 +1023,10 @@ struct SessionView: View {
                 let weather = try JSONDecoder().decode(Metar.self, from: data)
                 let wxrSorted = weather.data?.sorted()
                 
-                // LEBZm = String(wxrSorted?[4] ?? "")
-                // LPBJm = String(wxrSorted?[1] ?? "")
-                // LPMRm = String(wxrSorted?[2] ?? "")
-                // LPMTm = String(wxrSorted?[3] ?? "")
-                EGTCm = String(wxrSorted?[0] ?? "")
+                EGBJm = String(wxrSorted?[0] ?? "")
+                EGSCm = String(wxrSorted?[1] ?? "")
+                EGTCm = String(wxrSorted?[2] ?? "")
+                EGTKm = String(wxrSorted?[3] ?? "")
                 
             } catch let err {
                 print ("Json Err", err)
@@ -1077,8 +1056,8 @@ struct SessionView: View {
         }.resume()
         
     }
-    func LPMTtaf() {
-        let url = URL(string: "https://avwx.rest/api/taf/LPMT")!
+    func EGSCtaf() {
+        let url = URL(string: "https://avwx.rest/api/taf/EGSC")!
         var request = URLRequest(url: url)
         request.addValue("vTzmtdwxOfCF21hIR6YeeL9WF-JVSKTZHBBgv5boIBc", forHTTPHeaderField: "Authorization")
         
@@ -1092,15 +1071,15 @@ struct SessionView: View {
             do {
                 let weather = try JSONDecoder().decode(LPPTTaf.self, from: data)
                 
-                LPMTt = weather.raw ?? ""
+                EGSCt = weather.raw ?? ""
             } catch let err {
                 print ("Json Err", err)
             }
         }.resume()
         
     }
-    func LEBZtaf() {
-        let url = URL(string: "https://avwx.rest/api/taf/LEBZ")!
+    func EGTKtaf() {
+        let url = URL(string: "https://avwx.rest/api/taf/EGTK")!
         var request = URLRequest(url: url)
         request.addValue("vTzmtdwxOfCF21hIR6YeeL9WF-JVSKTZHBBgv5boIBc", forHTTPHeaderField: "Authorization")
         
@@ -1114,15 +1093,15 @@ struct SessionView: View {
             do {
                 let weather = try JSONDecoder().decode(LPPTTaf.self, from: data)
                 
-                LEBZt = weather.raw ?? ""
+                EGTKt = weather.raw ?? ""
             } catch let err {
                 print ("Json Err", err)
             }
         }.resume()
         
     }
-    func LPMRtaf() {
-        let url = URL(string: "https://avwx.rest/api/taf/LPMR")!
+    func EGBJtaf() {
+        let url = URL(string: "https://avwx.rest/api/taf/EGBJ")!
         var request = URLRequest(url: url)
         request.addValue("vTzmtdwxOfCF21hIR6YeeL9WF-JVSKTZHBBgv5boIBc", forHTTPHeaderField: "Authorization")
         
@@ -1136,29 +1115,7 @@ struct SessionView: View {
             do {
                 let weather = try JSONDecoder().decode(LPPTTaf.self, from: data)
                 
-                LPMRt = weather.raw ?? ""
-            } catch let err {
-                print ("Json Err", err)
-            }
-        }.resume()
-        
-    }
-    func LPBJtaf() {
-        let url = URL(string: "https://avwx.rest/api/taf/LPBJ")!
-        var request = URLRequest(url: url)
-        request.addValue("vTzmtdwxOfCF21hIR6YeeL9WF-JVSKTZHBBgv5boIBc", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            // check for error
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            // check for 200 OK status
-            guard let data = data else { return }
-            do {
-                let weather = try JSONDecoder().decode(LPPTTaf.self, from: data)
-                
-                LPBJt = weather.raw ?? ""
+                EGBJt = weather.raw ?? ""
             } catch let err {
                 print ("Json Err", err)
             }
