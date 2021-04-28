@@ -1,0 +1,864 @@
+[
+    {
+        "checklist": "BEFORE ENGINE START",
+        "actions": [
+            {
+                "name": "Pre-Flight/Turnaround Inspection",
+                "action": "COMPLETE"
+            },
+            {
+                "name": "Flaps",
+                "action": "RETRACT"
+            },
+            {
+                "name": "Passengers",
+                "action": "BOARD & BRIEFED"
+            },
+            {
+                "name": "Door",
+                "action": "CLOSED & SECURE"
+            },
+            {
+                "name": "Seats",
+                "action": "ADJUST & LOCKED IN POSITION"
+            },
+            {
+                "name": "Seatbelts and Harnesses",
+                "action": "FASTEN/ADJUST CHECK INERTIAL REEL"
+            },
+            {
+                "name": "FUEL Selector",
+                "action": "DESIRED TANK"
+            },
+            {
+                "name": "PARK BRAKE",
+                "action": "SET"
+            },
+            {
+                "name": "Circuit Breakers",
+                "action": "CHECK IN"
+            },
+            {
+                "name": "ALT AIR",
+                "action": "CLOSE"
+            },
+            {
+                "name": "ALTERNATE STATIC SOURCE",
+                "action": "OFF"
+            },
+            {
+                "name": "ELT",
+                "action": "ARMED"
+            },
+            {
+                "name": "All Electrical Switches",
+                "action": "OFF"
+            },
+            {
+                "name": "Flight Controls",
+                "action": "FULL AND FREE"
+            },
+            {
+                "name": "Stabilator & Rudder Trims",
+                "action": "CHECK & SET T/O"
+            },
+            {
+                "name": "BATT MASTR",
+                "action": "OFF"
+            },
+            {
+                "name": "AVION MASTR",
+                "action": "OFF"
+            },
+            {
+                "name": "EMERG BATT Switch",
+                "action": "ARM"
+            },
+            {
+                "name": "E Volts Indication",
+                "action": "MINIMUM 23.3 VOLTS"
+            },
+            {
+                "name": "Fuel QTY Indications",
+                "action": "CHECK QTY & IMBALANCE"
+            },
+            {
+                "name": "Request Engine Start",
+                "action": ""
+            }
+        ]
+    },
+    {
+        "checklist": "ENGINE START",
+        "actions": [
+            {
+                "name": "THROTTLE",
+                "action": "½ IN. OPEN"
+            },
+            {
+                "name": "BATT MASTR Switch",
+                "action": "ON"
+            },
+            {
+                "name": "ALTR Switch",
+                "action": "ON"
+            },
+            {
+                "name": "LEFT/RIGHT MAG Switches",
+                "action": "ON"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "ON"
+            },
+            {
+                "name": "FIN STROBE Switch",
+                "action": "ON"
+            },
+            {
+                "name": "MIXTURE - Cold engine",
+                "action": "PRIME - then IDLE CUT-OFF"
+            },
+            {
+                "name": "MIXTURE - Hot engine",
+                "action": "IDLE CUT-OFF"
+            },
+            {
+                "name": "CAS messages",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "PFD annunciations",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "Propeller (Area)",
+                "action": "CLEAR"
+            },
+            {
+                "name": "START Switch",
+                "action": "ENGAGE"
+            },
+            {
+                "name": "MIXTURE (when engine starts)",
+                "action": "ADVANCE - RICH"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "ADJUST (800 - 1200 RPM)"
+            },
+            {
+                "name": "Oil Pressure",
+                "action": "CHECK"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "SET 1000 RPM"
+            }
+        ]
+    },
+    {
+        "checklist": "AFTER ENGINE START (BEFORE TAXIING)",
+        "actions": [
+            {
+                "name": "AVION MASTR Switch",
+                "action": "ON"
+            },
+            {
+                "name": "EMERG BATT Swith",
+                "action": "VERIFY ARM"
+            },
+            {
+                "name": "FMS Setup (MFD)",
+                "action": "VERIFY & COMPLETE"
+            },
+            {
+                "name": "Transponder",
+                "action": "STBY"
+            },
+            {
+                "name": "CAS Messages",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "PFD Annunciations",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "System Messages (Message Softkey)",
+                "action": "CONSIDER"
+            },
+            {
+                "name": "Lights",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Heater & Defroster",
+                "action": "AS DESIRED"
+            },
+            {
+                "name": "TRAFFIC (If installed)",
+                "action": "TEST"
+            },
+            {
+                "name": "COM/NAV Radios & AVIONICS",
+                "action": "CHECK & SET"
+            },
+            {
+                "name": "Annunciator Test",
+                "action": "TEST"
+            },
+            {
+                "name": "Standby Flight Instrument",
+                "action": "VERIFY ON with NO RED-X'S or FAILURE ANNUNCIATIONS"
+            },
+            {
+                "name": "Altimeter/Stanby Altimeter",
+                "action": "SET & Cross check"
+            },
+            {
+                "name": "Brief",
+                "action": "GROUND MOVEMENT/TEM"
+            },
+            {
+                "name": "Passenger Briefing (if applicable)",
+                "action": "COMPLETE"
+            },
+            {
+                "name": "Request Taxi",
+                "action": ""
+            },
+            {
+                "name": "Landing Light",
+                "action": "ON"
+            }
+        ]
+    },
+    {
+        "checklist": "TAXI",
+        "actions": [
+            {
+                "name": "Taxi area",
+                "action": "CLEAR"
+            },
+            {
+                "name": "PARK BRAKE",
+                "action": "RELEASED"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "APPLY SLOWLY"
+            },
+            {
+                "name": "Brakes",
+                "action": "CHECK"
+            },
+            {
+                "name": "Steering",
+                "action": "CHECK"
+            },
+            {
+                "name": "Flight Instruments",
+                "action": "CHECK (BAR, AI, HSI - PFD then STBY)"
+            }
+        ]
+    },
+    {
+        "checklist": "ENGINE RUN UP (GROUND CHECK)",
+        "actions": [
+            {
+                "name": "PARK BRAKE",
+                "action": "SET"
+            },
+            {
+                "name": "Landing Light",
+                "action": "OFF"
+            },
+            {
+                "name": "Area",
+                "action": "CLEAR"
+            },
+            {
+                "name": "FUEL Selector",
+                "action": "SWITCH TANK"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "2000 RPM"
+            },
+            {
+                "name": "LEFT/RIGHT MAG Check",
+                "action": "MAX.10 secs each MAG"
+            },
+            {
+                "name": "MAX. DROP 175 RPM + MAX. DIFF 50 RPM",
+                "action": ""
+            },
+            {
+                "name": "Oil Temperature",
+                "action": "CHECK"
+            },
+            {
+                "name": "Oil Pressure",
+                "action": "CHECK"
+            },
+            {
+                "name": "VOLTS Indication",
+                "action": "CHECK BUS (28 ±1 VOLT)"
+            },
+            {
+                "name": "ALTR AMPS Indication",
+                "action": "CHECK"
+            },
+            {
+                "name": "ALT AIR",
+                "action": "APPROX. 40 RPM DROP"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "OFF"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "RETARD IDLE, THEN SET 1000 RPM"
+            },
+            {
+                "name": "Pitot Heat",
+                "action": "ON, CHECK Annunciator & Amps, THEN OFF"
+            }
+        ]
+    },
+    {
+        "checklist": "BEFORE TAKE OFF",
+        "actions": [
+            {
+                "name": "BATT MASTR Switch",
+                "action": "VERIFY ON"
+            },
+            {
+                "name": "ALTR Switch",
+                "action": "VERIFY ON"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "ON"
+            },
+            {
+                "name": "LEFT/RIGHT MAG Switches",
+                "action": "VERIFY ON"
+            },
+            {
+                "name": "Flight Instruments",
+                "action": "CHECK"
+            },
+            {
+                "name": "Standby Flight Instruments",
+                "action": "CHECK"
+            },
+            {
+                "name": "CAS Messages",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "PFD Annunciations",
+                "action": "CONSIDER ANY ILLUMINATED"
+            },
+            {
+                "name": "System Messages (Messages Softkey)",
+                "action": "CONSIDER"
+            },
+            {
+                "name": "FUEL Selector",
+                "action": "PROPER TANK"
+            },
+            {
+                "name": "Engine Indications",
+                "action": "CHECK"
+            },
+            {
+                "name": "ALT AIR",
+                "action": "CLOSE"
+            },
+            {
+                "name": "MIXTURE",
+                "action": "SET RICH"
+            },
+            {
+                "name": "Seat Backs",
+                "action": "ERECT"
+            },
+            {
+                "name": "Seats",
+                "action": "ADJUST & LOCKED IN POSITION"
+            },
+            {
+                "name": "Belts/Harness",
+                "action": "FASTENED/CHECK"
+            },
+            {
+                "name": "Empty Seats",
+                "action": "SEAT BELTS SECURELY FASTENED"
+            },
+            {
+                "name": "Flaps",
+                "action": "SET AS REQUIRED"
+            },
+            {
+                "name": "Stabilator and Rudder Trims",
+                "action": "SET T/O"
+            },
+            {
+                "name": "Controls",
+                "action": "FREE AND CORRECT"
+            },
+            {
+                "name": "Door",
+                "action": "LATCHED"
+            },
+            {
+                "name": "Brief",
+                "action": "DEPARTURE/TEM"
+            },
+            {
+                "name": "Brief",
+                "action": "TAKE OFF SAFETY BRIEFING"
+            }
+        ]
+    },
+    {
+        "checklist": "RUNWAY ENTRY",
+        "actions": [
+            {
+                "name": "Strobe Lights/Landing Light",
+                "action": "ON"
+            },
+            {
+                "name": "Transponder",
+                "action": "ALT"
+            },
+            {
+                "name": "Icing",
+                "action": "CHECK"
+            },
+            {
+                "name": "Piot Heat",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "HSI/STBY HSI/Runway",
+                "action": "CHECK HEADING"
+            }
+        ]
+    },
+    {
+        "checklist": "CLEARED TAKE-OFF",
+        "actions": [
+            {
+                "name": "Flaps",
+                "action": "SET AS REQUIRED"
+            },
+            {
+                "name": "Trim",
+                "action": "CHECK SET T/O"
+            },
+            {
+                "name": "Brakes",
+                "action": "APPLY & HOLD"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "FULL POWER"
+            },
+            {
+                "name": "Temps & Press",
+                "action": "CHECK"
+            },
+            {
+                "name": "RPM",
+                "action": "AT ISA: 2240-2340 RPM - STABALIZED"
+            },
+            {
+                "name": "Brakes",
+                "action": "RELEASE"
+            },
+            {
+                "name": "ASI",
+                "action": "INCREASING"
+            }
+        ]
+    },
+    {
+        "checklist": "AFTER TAKE OFF/GO AROUND",
+        "actions": [
+            {
+                "name": "≥ 200ft AAL",
+                "action": ""
+            },
+            {
+                "name": "Power",
+                "action": "FULL"
+            },
+            {
+                "name": "Flaps",
+                "action": "UP"
+            },
+            {
+                "name": "Landing light",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Altimeters",
+                "action": "CHECK"
+            },
+            {
+                "name": "COM/",
+                "action": "CHECK"
+            },
+            {
+                "name": "Leaving circuit, above 1000ft AAL",
+                "action": ""
+            },
+            {
+                "name": "Fuel pump",
+                "action": "OFF"
+            }
+        ]
+    },
+    {
+        "checklist": "CLIMB",
+        "actions": [
+            {
+                "name": "Fuel Pump",
+                "action": "OFF"
+            },
+            {
+                "name": "Airspace",
+                "action": "CHECK"
+            },
+            {
+                "name": "Altimeters",
+                "action": "SET"
+            },
+            {
+                "name": "Temps & Press",
+                "action": "CHECK NORMAL"
+            },
+            {
+                "name": "Icing",
+                "action": "CHECK"
+            }
+        ]
+    },
+    {
+        "checklist": "CRUISE",
+        "actions": [
+            {
+                "name": "Power",
+                "action": "SET PER POWER TABLE"
+            },
+            {
+                "name": "Fuel",
+                "action": "CHECK BALANCE, TANK AS REQUIRED"
+            },
+            {
+                "name": "Mixture",
+                "action": "ADJUST"
+            },
+            {
+                "name": "Temps & Press",
+                "action": "CHECK"
+            },
+            {
+                "name": "COM/NAV Radios & Avionics",
+                "action": "CHECK & SET"
+            },
+            {
+                "name": "Altimeters",
+                "action": "SET"
+            },
+            {
+                "name": "Icing",
+                "action": "CHECK"
+            }
+        ]
+    },
+    {
+        "checklist": "DESCENT",
+        "actions": [
+            {
+                "name": "Airspace",
+                "action": "REVIEW/CHECK"
+            },
+            {
+                "name": "Altimeters",
+                "action": "SET/CROSS CHECK"
+            },
+            {
+                "name": "MSA",
+                "action": "CHECK"
+            },
+            {
+                "name": "Temps & Press",
+                "action": "CHECK NORMAL"
+            },
+            {
+                "name": "Fuel",
+                "action": "CHECK BALANCE, TANK AS REQUIRED"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Airspeed",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Mixture",
+                "action": "RICH"
+            },
+            {
+                "name": "Icing",
+                "action": "CHECK"
+            }
+        ]
+    },
+    {
+        "checklist": "AIRFIELD APPROACH",
+        "actions": [
+            {
+                "name": "COM/NAV Radios & Avionics",
+                "action": "CHECK & SET"
+            },
+            {
+                "name": "ATIS/Weather",
+                "action": "OBTAINED"
+            },
+            {
+                "name": "Altimeter/Standby Altimeter",
+                "action": "SET & CROSS CHECKED"
+            },
+            {
+                "name": "Seat Backs",
+                "action": "ERECT"
+            },
+            {
+                "name": "Seat Belts, Harnesses",
+                "action": "FASTEN/ADJUSTED"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "ON"
+            },
+            {
+                "name": "FUEL Selector",
+                "action": "PROPER TANK"
+            },
+            {
+                "name": "Brief",
+                "action": "APPROACH/TEM"
+            },
+            {
+                "name": "Icing",
+                "action": "CHECK"
+            }
+        ]
+    },
+    {
+        "checklist": "PRE LANDING",
+        "actions": [
+            {
+                "name": "FLAPS",
+                "action": "SET AS REQUIRED (102 KIAS max.)"
+            },
+            {
+                "name": "ALT AIR",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "MIXTURE",
+                "action": "FULL RICH"
+            },
+            {
+                "name": "Landing Light",
+                "action": "ON"
+            },
+            {
+                "name": "FUEL Selector",
+                "action": "PROPER TANK"
+            },
+            {
+                "name": "PARK BRAKE",
+                "action": "VERIFY OFF"
+            },
+            {
+                "name": "Toe Brakes",
+                "action": "DEPRESS TO CHECK"
+            },
+            {
+                "name": "Seatbelt",
+                "action": "SECURE"
+            },
+            {
+                "name": "Initial Approach Speed",
+                "action": "AS REQUIRED"
+            }
+        ]
+    },
+    {
+        "checklist": "FINAL DESCENT",
+        "actions": [
+            {
+                "name": "Altimeter/Standby Altimeter",
+                "action": "SET & CROSS CHECKED"
+            },
+            {
+                "name": "Final Approach Speed",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Flaps",
+                "action": "AS REQUIRED"
+            }
+        ]
+    },
+    {
+        "checklist": "FINAL SAFETY CHECK",
+        "actions": [
+            {
+                "name": "Approach",
+                "action": "'1000' OR '400' - 'STABLE'"
+            },
+            {
+                "name": "a. IFR Gate: 1000ft AAL",
+                "action": ""
+            },
+            {
+                "name": "b. VFR Gate: 400ft AAL",
+                "action": ""
+            },
+            {
+                "name": "FLAPS",
+                "action": "AS REQUIRED"
+            },
+            {
+                "name": "Approach",
+                "action": "'100ft LANDING'/'100ft Going around'"
+            },
+            {
+                "name": "c. Landing Gate: 100ft AAL",
+                "action": ""
+            },
+            {
+                "name": "Touchdown",
+                "action": ""
+            },
+            {
+                "name": "Touchdown",
+                "action": "MAIN WHEELS then GENTLY LOWER NOSE"
+            },
+            {
+                "name": "Braking",
+                "action": "AS REQUIRED"
+            }
+        ]
+    },
+    {
+        "checklist": "AFTER LANDING",
+        "actions": [
+            {
+                "name": "FLAPS",
+                "action": "RETRACT"
+            },
+            {
+                "name": "Pitot heat",
+                "action": "OFF"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "OFF"
+            },
+            {
+                "name": "Fin Strobe",
+                "action": "ON"
+            },
+            {
+                "name": "Transponder",
+                "action": "STBY"
+            },
+            {
+                "name": "Radios",
+                "action": "AS REQUIRED"
+            }
+        ]
+    },
+    {
+        "checklist": "SHUTDOWN",
+        "actions": [
+            {
+                "name": "Power",
+                "action": "1000 RPM"
+            },
+            {
+                "name": "PARK BRAKE",
+                "action": "SET (AS REQUIRED)"
+            },
+            {
+                "name": "FLAPS",
+                "action": "CHECK RETRACT"
+            },
+            {
+                "name": "FUEL PUMP",
+                "action": "CHECK OFF"
+            },
+            {
+                "name": "EMERG BATT Switch",
+                "action": "OFF"
+            },
+            {
+                "name": "AVION MASTR",
+                "action": "OFF"
+            },
+            {
+                "name": "Electrical Switches",
+                "action": "OFF"
+            },
+            {
+                "name": "ALTR Switch",
+                "action": "OFF"
+            },
+            {
+                "name": "THROTTLE",
+                "action": "CLOSED"
+            },
+            {
+                "name": "MIXTURE",
+                "action": "IDLE CUT-OFF"
+            },
+            {
+                "name": "ELT",
+                "action": "CHECK 121.5"
+            },
+            {
+                "name": "LEFT/RIGHT MAG Switches",
+                "action": "OFF"
+            },
+            {
+                "name": "Interior Lights",
+                "action": "OFF"
+            },
+            {
+                "name": "Exterior Lights",
+                "action": "OFF"
+            },
+            {
+                "name": "BATT MASTR Switch",
+                "action": "OFF"
+            },
+            {
+                "name": "STANDBY INSTRUMENT",
+                "action": "VERIFY SHUTDOWN"
+            }
+        ]
+    }
+]

@@ -1,0 +1,1314 @@
+[
+    {
+        "section": "FIRE",
+        "checklists": [
+            {
+                "title": "ENGINE FIRE DURING START",
+                "actions": [
+                    {
+                        "name": "START Switch",
+                        "action": "CONTINUE to CRANK ENGINE"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "IDLE CUT-OFF"
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "OFF"
+                    }
+                ]
+            },
+            {
+                "title": "ENGINE FIRE IN FLIGHT",
+                "actions": [
+                    {
+                        "name": "FUEL Selector",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "CLOSED"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "IDLE CUT-OFF"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "HEAT/DEF (Defroster)",
+                        "action": "OFF"
+                    }
+                ]
+            },
+            {
+                "title": "ELECTRICAL FIRE IN FLIGHT",
+                "actions": [
+                    {
+                        "name": "EMERG BATT Switch",
+                        "action": "VERIFY ARM"
+                    },
+                    {
+                        "name": "BATT MASTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Vents",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "HEAT/DEF (Defroster)",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Fire",
+                        "action": "EXTINGUISH"
+                    },
+                    {
+                        "name": "Emergency Descent (If needed)",
+                        "action": "TO A SAFE ALTITUDE CONSISTENT WITH TERRAIN"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "ENGINE POWER LOSS",
+        "checklists": [
+            {
+                "title": "ENGINE POWER LOSS DURING TAKE-OFF",
+                "actions": [
+                    {
+                        "name": "If sufficient runway remains for a complete stop:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "MAINTAIN SAFE AIRSPEED"
+                    },
+                    {
+                        "name": "Landing",
+                        "action": "LAND and STOP STRAIGHT AHEAD"
+                    },
+                    {
+                        "name": "Brakes",
+                        "action": "AS REQUIRED"
+                    },
+                    {
+                        "name": "If insufficient runway remains:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "MAINTAIN SAFE AIRSPEED"
+                    },
+                    {
+                        "name": "Flaps",
+                        "action": "AS REQUIRED"
+                    },
+                    {
+                        "name": "If sufficient altitude has been gained to attempt a restart:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "MAINTAIN 76 KIAS"
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "SWITCH to tank containing fuel"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "RICH"
+                    },
+                    {
+                        "name": "ALTERNATE AIR",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "If power is not regained, proceed with power off landing.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ENGINE POWER LOSS IN FLIGHT",
+                "actions": [
+                    {
+                        "name": "Airspeed",
+                        "action": "MAINTAIN 76 KIAS"
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "SWITCH to tank containing fuel"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "RICH"
+                    },
+                    {
+                        "name": "ALTERNATE AIR",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "LEFT/RIGHT MAG Switches",
+                        "action": "Turn OFF then ON one at a time"
+                    },
+                    {
+                        "name": "When power is restored:",
+                        "action": ""
+                    },
+                    {
+                        "name": "ALTERNATE AIR",
+                        "action": "CLOSE"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Land as soon as practical and investigate cause of power loss.",
+                        "action": ""
+                    },
+                    {
+                        "name": "If power is not restored prepare for power-off landing.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "POWER OFF LANDING",
+                "actions": [
+                    {
+                        "name": "Airspeed",
+                        "action": "MAINTAIN 76 KIAS"
+                    },
+                    {
+                        "name": "Air Condition (If installed)",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Landing Pattern",
+                        "action": "ESTABLISH 1000 FT ABOVE FIELD AT DOWNWIND POSITION"
+                    },
+                    {
+                        "name": "When committed to landing:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "66 KIAS"
+                    },
+                    {
+                        "name": "Flaps",
+                        "action": "AS DESIRED"
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "CLOSE"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "IDLE CUT-OFF"
+                    },
+                    {
+                        "name": "LEFT/RIGHT MAG Switches",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "BATT MASTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Seat belts and shoulder harnesses",
+                        "action": "TIGHTEN"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "ENGINE INDICATING SYSTEM (EIS)",
+        "checklists": [
+            {
+                "title": "OIL PRESSURE",
+                "actions": [
+                    {
+                        "name": "Indications: Master Warning, Triple Chime, Flashing Red Oil Pressure Indication",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Low Oil Pressure:",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "MINIMUM REQUIRED"
+                    },
+                    {
+                        "name": "If accompanied by high oil temperature, land as soon as possible.",
+                        "action": ""
+                    },
+                    {
+                        "name": "If accompanied by normal oil temperature, land as soon as possible.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "High Oil Pressure:",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "MINIMUM REQUIRED"
+                    },
+                    {
+                        "name": "Land as soon as practical.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If possible, always retain glide capability to the selected landing area in case of total engine failure.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "OIL TEMPERATURE",
+                "actions": [
+                    {
+                        "name": "Indications: Master Warning, Triple Chime, Flashing Red Oil Temperature Indication",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "MINIMUM REQUIRED"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "FULL RICH"
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "INCREASE if practical"
+                    },
+                    {
+                        "name": "Land as soon as possible and investigate the problem. Prepare for power off Landing.",
+                        "action": ""
+                    }
+                    ,
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If possible, always retain glide capability to the selected landing area in case of total engine failure.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "LOSS OF FUEL FLOW",
+                "actions": [
+                    {
+                        "name": "If normal engine operation and fuel flow is not immediately re-established, or if the engine quits, the electric fuel pump should be turned off. The lack of fuel flow indication could indicate a leak in the fuel system, or fuel exhaustion. Land at the nearest suitable airport as soon as possible and have the cause investigated.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If caused by fuel depletion in one tank:",
+                        "action": ""
+                    },
+                    {
+                        "name": "FUEL PUMP Switch",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "SELECT OTHER TANK (FULLEST)"
+                    },
+                    {
+                        "name": "FUEL PUMP Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If caused by engine driven fuel pump failure:",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "CLOSE"
+                    },
+                    {
+                        "name": "FUEL PUMP Switch",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "RE-ESTABLISH (as required)"
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "RE-ESTABLISH (as required)"
+                    }
+                ]
+            },
+            {
+                "title": "FUEL QUANTITY LOW",
+                "actions": [
+                    {
+                        "name": "Indication: Master Warning, Triple Chime L FUEL QTY or R FUEL QTY",
+                        "action": ""
+                    },
+                    {
+                        "name": "Avoid unusual attitudes such as prolonged slips towards the low quantity tank as this will decrease the time remaining prior to fuel starvation.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If one tank has low fuel quantity:",
+                        "action": ""
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "ON FULLEST TANK"
+                    },
+                    {
+                        "name": "Land as soon as practical.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If both tanks have low fuel quantity:",
+                        "action": ""
+                    },
+                    {
+                        "name": "FUEL Selector",
+                        "action": "ALTERNATE TANKS TO MAINTAIN FUEL SUPPLY TO ENGINE"
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "ELECTRICAL FAILURES",
+        "checklists": [
+            {
+                "title": "ALTERNATOR FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: Master Warning, Triple Chime ALTR FAIL",
+                        "action": ""
+                    },
+                    {
+                        "name": "The ALTR circuit breaker should not be opened manually when the alternator is functioning properly",
+                        "action": ""
+                    },
+                    {
+                        "name": "Verify Failure",
+                        "action": "CHECK ALTR AMPS indication"
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "ALTR Circuit Breaker (Row 1, Col. 13)",
+                        "action": "RESET If Tripped"
+                    },
+                    {
+                        "name": "ALTR FIElD Circuit Breaker (Row 2, Col. 13)",
+                        "action": "RESET"
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If alternator still failed:",
+                        "action": ""
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "Electrical Power Remaining",
+                        "action": "30 minutes or less"
+                    },
+                    {
+                        "name": "Electrical Load",
+                        "action": "SHED in less than 3 minutes"
+                    },
+                    {
+                        "name": "NON ESS BUS Circuit Breaker (Row 1, Col. 1)",
+                        "action": "PULL"
+                    },
+                    {
+                        "name": "LIGHTING BUS Circuit Breaker (Row 1, Col. 2)",
+                        "action": "PULL"
+                    },
+                    {
+                        "name": "AVION MASTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "To ensure 30-minutes of battery life:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Battery Discharge",
+                        "action": "-13 Amps Maximum"
+                    },
+                    {
+                        "name": "Pitot Heat",
+                        "action": "14 Minutes Usage Maximum"
+                    },
+                    {
+                        "name": "Com Radio",
+                        "action": "3 Mins Usage Maximum"
+                    },
+                    {
+                        "name": "Fuel Pump",
+                        "action": "2 Mins Usage Maximum"
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "COMPLETE ELECTRICAL FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: Single Chime, EMERG BATT ON",
+                        "action": ""
+                    },
+                    {
+                        "name": "The VOLTS indication on the EIS window automatically changes to the emergency bus voltage (E VOLTS) when operating exclusively on the emergency bus.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Cooling air for PFD, GIA1 and the transponder will be lost when operating exclusively on the emergency bus as indicated by th PFD FAN FAIL and AV FAN FAIL advisory CAS messages.",
+                        "action": ""
+                    },
+                    {
+                        "name": "EMERG BATT Switch",
+                        "action": "Verify ARM"
+                    },
+                    {
+                        "name": "Standby Flight Instrument",
+                        "action": "Verify OPERATIONAL"
+                    },
+                    {
+                        "name": "Aircraft Control",
+                        "action": "use PFD and Standby Instrument"
+                    },
+                    {
+                        "name": "BATT MASTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "ALTR Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Prior to landing:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Landing Light",
+                        "action": "INOPERATIVE"
+                    },
+                    {
+                        "name": "Approximately 30 minutes of electrical power is available.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "EMERGENCY BATTERY VOLTAGE",
+                "actions": [
+                    {
+                        "name": "Indication: Master Warning, Triple Chime, Flashing Red E VOLTS Indication",
+                        "action": ""
+                    },
+                    {
+                        "name": "Complete electrical failure is imminent",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "AVIONICS FAILURES",
+        "checklists": [
+            {
+                "title": "PFD FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: PFD display goes blank.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Standby Instrument",
+                        "action": "Verify OPERATIONAL"
+                    },
+                    {
+                        "name": "Aircraft Control",
+                        "action": "Use Standby Instrument"
+                    },
+                    {
+                        "name": "DISPLAY BACKUP button on audio panel",
+                        "action": "PUSH (button extended)"
+                    },
+                    {
+                        "name": "Aircraft Control",
+                        "action": "Use MFD and Standby Instrument"
+                    },
+                    {
+                        "name": "COM2",
+                        "action": "ACTIVATE and TUNE as necessary"
+                    },
+                    {
+                        "name": "NAV2",
+                        "action": "ACTIVATE and TUNE as necessary"
+                    },
+                    {
+                        "name": "COM2/MIC",
+                        "action": "SELECT on Audio Panel"
+                    },
+                    {
+                        "name": "DME",
+                        "action": "SELECT NAV2 in DME TUNING Window"
+                    },
+                    {
+                        "name": "Exit and avoid IFR conditions as soon as practical.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If the PFD fails, the MFD will remain in normal mode. Pushing the DISPLAY BACKUP button on the audio panel allows the MFD to display ADAHRS informatino but lose the EIS page and certain map functions. The following features will become inoperative if there is a complete loss of PFD functionality: Autopilot, COM1 (yellow x'd but 121.5 MHz remains available), NAV1, GPS1, Traffic",
+                        "action": ""
+                    },
+                    {
+                        "name": "If PFD failure occurs while operating on NAV1 DME, the NAV1 DME information will continue to be available. If the pilot subsequently selects NAV2 DME, NAV1 DME cannot be reselected.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "MFD FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: MFD goes blank.",
+                        "action": ""
+                    },
+                    {
+                        "name": "PFD should automatically revert to the reversionary mode display.",
+                        "action": ""
+                    },
+                    {
+                        "name": "DISPLAY BACKUP on audio panel",
+                        "action": "PUSH (button extended)"
+                    },
+                    {
+                        "name": "Exit and avoid IFR conditions as soon as practical.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "The following features will become inoperative if there is a complete loss of MFD functionality: COM2 (yellow x'd but 121.5 MHz remain available), NAV2, GPS2, GDL 69SXM (Garmin Datalink - XM), DME, ADF, ESP",
+                        "action": ""
+                    },
+                    {
+                        "name": "If the GFC700 autopilot was engaged prior to MFD failure, it remain engaged in its current lateral and vertical modes. The modes cannot be changed and if the autopilot is disengaged, it cannot be re-engaged",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ADAHRS TOTAL FAILURE ON THE GROUND",
+                "actions": [
+                    {
+                        "name": "Indication: Sky/Ground presentation removed, course pointer straight up, yellow-x's and amber text on all air data, attitude and heading indicators.",
+                        "action": ""
+                    },
+                    {
+                        "name": "System Message (MSG Softkey)",
+                        "action": "CONSIDER"
+                    },
+                    {
+                        "name": "ADAHRS Circuit Breaker (Row 2, Col. 8)",
+                        "action": "RESET"
+                    },
+                    {
+                        "name": "If ADAHRS data still invalid:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Avoid flight in IFR conditions.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "For partial ADAHRS failures, a yellow-x and amber text will appear over the affected parameter(s).",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ADAHRS TOTAL FAILURE IN FLIGHT",
+                "actions": [
+                    {
+                        "name": "Indications: Sky/Ground presentation removed, course pointer straight up, yellow-x's and amber text on all air data, attitude and heading indicators.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Standby Instrument",
+                        "action": "VERIFY NO FAILURE INDICATIONS"
+                    },
+                    {
+                        "name": "Attitude and Heading",
+                        "action": "Use Standby Instrument"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "The following features will become inoperative if there is a complete loss of ADAHRS functionality: Autopilot (including ESP), TAS",
+                        "action": ""
+                    },
+                    {
+                        "name": "For partial ADAHRS failures, a yellow-x and amber text will appear over the affected parameter(s).",
+                        "action": ""
+                    },
+                    {
+                        "name": "Course",
+                        "action": "Set using CRS knob on PFD"
+                    },
+                    {
+                        "name": "System Messages (MSG Softkey)",
+                        "action": "CONSIDER"
+                    },
+                    {
+                        "name": "ADAHRS Circuit Breaker (Row 2, Col. 8)",
+                        "action": "RESET"
+                    },
+                    {
+                        "name": "If ADAHRS data still invalid:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Avoid flight in IFR conditions.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ERRONEOUS OR LOSS OF ENGINE AND FUEL DISPLAYS",
+                "actions": [
+                    {
+                        "name": "Indication: Yellow-x over affected engine parameter or fuel display.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Erroneous indications may be determined by comparing a display with other system information.",
+                        "action": ""
+                    },
+                    {
+                        "name": "1. Set power based on throttle lever position, engine sound and speed.",
+                        "action": ""
+                    },
+                    {
+                        "name": "2. Monitor other indications to determine the health of the engine.",
+                        "action": ""
+                    },
+                    {
+                        "name": "3. Use known power setting from POH power setting tables for approximate fuel flow values.",
+                        "action": ""
+                    },
+                    {
+                        "name": "4. Use other system information, such as annunciator messages, fuel totalizer quantity and flow, to safely complete the flight.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If indications for any of the following are invalid: All Engine Parameters, VOLTS, ALTR AMPS, BATT AMPS, FUEL QTY",
+                        "action": ""
+                    },
+                    {
+                        "name": "GEA circuit breaker (Row 2, Col. 3)",
+                        "action": "RESET"
+                    },
+                    {
+                        "name": "If all GEA parameters are still unavailable, Land as soon as practical.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ERRONEOUS OR LOSS OF WARNING/CAUTION CAS MESSAGES",
+                "actions": [
+                    {
+                        "name": "Indication: Yellow-x is shown over the CAS message window or CAS message present when not expected or CAS message not present when expected.",
+                        "action": ""
+                    },
+                    {
+                        "name": "1. If a yellow-x is placed over the CAS message window, monitor engine and airframe indications.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "See Section 3.1 of this handbook for a list of CAS Warning, Caution and Advisory messages that may be inoperative.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "2. If a CAS message appears that is not expected, treat it as if the condition exists.",
+                        "action": ""
+                    },
+                    {
+                        "name": "3. If an abnormal condition exists but the CAS message has not been activated, use other available information to confirm the condition exists. If it cannot be determined that the condition does not exist, treat the situation as if the condition does exist and take appropriate action.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "CAS mesages are inhibited for many parameters on the EIS Display of the MFD. The Master Warning and Master Caution indications and associated chimes are still activated whenever any indicated parameter enters the red or amber bands.",
+                        "action": ""
+                    },
+                    {
+                        "name": "If a yellow-x appears over the CAS message window, Land as soon as practical.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "COM 1 AND COM 2 FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: inability to communicate/receive on Com1 and COM2",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If power is lost to the audio panel a fail-safe communications path becomes available between the pilot's headset/microphon and COM1.",
+                        "action": ""
+                    },
+                    {
+                        "name": "AUDIO MKR circuit breaker (Row 2, Col. 9)",
+                        "action": "PULL"
+                    },
+                    {
+                        "name": "Exit and avoid IFR conditions as soon as practical.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "DUAL GPS FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: Amber 'DR' annunciation on HIS, Amber 'DR' superimposed over airplane symbol on moving map.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Navigation",
+                        "action": "Use alternate source of navigation (ILS, LOC, VOR, DME, ADF)"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If no alternative navigation sources are available:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Dead Reckoning (DR) Mode - Active whe nthe airplane is greater than 30 NM from the destination airport in flightplan.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Navigation",
+                        "action": "Use the airplane symbol and magenta course line on the MAP display and amber CDI on the HSI."
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Information normally derived from GPS turns amber and becomes more inaccurate over time. Amber CDI dissapears after 20 minutes.",
+                        "action": ""
+                    },
+                    {
+                        "name": "TAWS is Inoperative",
+                        "action": ""
+                    },
+                    {
+                        "name": "DR mode uses heading, airspeed and last known GPS position to estimate the airplanes current position. All maps with an airplane show a ghosted airplane and a 'DR' label. Traffic Information System (TIS) and Traffic Advisory System (TAS) are not dependant on GPS information. The position of displayed traffic relative to the airplane symbol on the map is still accurate.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Loss of Integrity (LOI) Mode - Active when GPS integrity is insufficient for the current phase of flight.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Navigation",
+                        "action": "Crosscheck / use other navigation sources as required"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "All information derived from GPS or DR is removed from the displays. The airplane symbol is removed from all maps. The map will remain centered at the last known position. 'NO GPS POSITION' is shown in the center of the map. TAWS and TAS are inoperative.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "AVIONICS COOLING FAN FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: CAS Advisory, Single Chime, AV FAN FAIL and/or PFD FAN FAIL and/or MFD FAN FAIL",
+                        "action": ""
+                    },
+                    {
+                        "name": "If Failure occurs on ground: Do not fly until issue is resolved.",
+                        "action": ""
+                    },
+                    {
+                        "name": "If failure occurs in flight: Fix issue prior to next flight.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "When any of these CAS messages illuminate, it is possible to exceed the manufacturer's specified temperature limits for the effected equipment.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "LOSS OF NAVIGATION INFORMATION",
+                "actions": [
+                    {
+                        "name": "Indication: Amber VOR, VAPP, GPS, BC, LOC or GS flashing on PFD",
+                        "action": ""
+                    },
+                    {
+                        "name": "If a navigation signal is lost while the autopilot is tracking it, the autopilot will roll the aircraft wings level and default to roll mode (ROL).",
+                        "action": ""
+                    },
+                    {
+                        "name": "Autopilot",
+                        "action": "SELECT ANOTHER LATERAL MODE"
+                    },
+                    {
+                        "name": "Nav Source",
+                        "action": "SELECT A VALID NAV SOURCE"
+                    },
+                    {
+                        "name": "Autopilot",
+                        "action": "SELECT NAV"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If on an instrument approach at the time the navigation signal is lost:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Missed Approach",
+                        "action": "EXECUTE"
+                    },
+                    {
+                        "name": "(A second approach may be attempted using other navaids.)",
+                        "action": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "OTHER",
+        "checklists": [
+            {
+                "title": "PITOT HEAT FAILURE",
+                "actions": [
+                    {
+                        "name": "Indication: Master Caution, Double Chime, PITOT HEAT FAIL",
+                        "action": ""
+                    },
+                    {
+                        "name": "PITOT HEAT Switch",
+                        "action": "OFF"
+                    },
+                    {
+                        "name": "PITOT HEAT Circuit Breaker (Row 2, Col. 2)",
+                        "action": "RESET"
+                    },
+                    {
+                        "name": "PITOT HEAT Switch",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "If Pitot heat still inoperative:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Exit and Avoid Instrument Meteorological Conditions.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "STARTER ENGAGED",
+                "actions": [
+                    {
+                        "name": "Indication: Master Warning, Triple Chime, START ENGD",
+                        "action": ""
+                    },
+                    {
+                        "name": "If on the ground:",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "REDUCE"
+                    },
+                    {
+                        "name": "ENG START Circuit Breaker (Row 1, Col. 10)",
+                        "action": "PULL"
+                    },
+                    {
+                        "name": "ENGINE",
+                        "action": "SHUTDOWN"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If in flight:",
+                        "action": ""
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "REDUCE"
+                    },
+                    {
+                        "name": "ENG START Circuit Breaker (Row 1, Col. 10)",
+                        "action": "PULL"
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "SPIN RECOVERY",
+                "actions": [
+                    {
+                        "name": "INTENTIONAL SPINS ARE PROHIBITED IN THIS AIRPLANE",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Rudder",
+                        "action": "FULL OPPOSITE TO DIRECTION OF ROTATION"
+                    },
+                    {
+                        "name": "Control wheel",
+                        "action": "FULL FORWARD while NEUTRALIZING AILERONS"
+                    },
+                    {
+                        "name": "THROTTLE",
+                        "action": "IDLE"
+                    },
+                    {
+                        "name": "Rudder",
+                        "action": "NEUTRAL (when rotation stops)"
+                    },
+                    {
+                        "name": "Control wheel",
+                        "action": "SMOOTH BACK PRESSURE to recover from dive"
+                    }
+                ]
+            },
+            {
+                "title": "OPEN DOOR",
+                "actions": [
+                    {
+                        "name": "To Close the door in flight:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Airspeed",
+                        "action": "REDUCE to less than 87 KIAS"
+                    },
+                    {
+                        "name": "Cabin vents",
+                        "action": "CLOSE"
+                    },
+                    {
+                        "name": "Storm window",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "Upper latch (if open)",
+                        "action": "CLOSE latch"
+                    },
+                    {
+                        "name": "Side latch (if open)",
+                        "action": "PULL on Armrest While Closing Latch"
+                    },
+                    {
+                        "name": "If Both Latches Open",
+                        "action": "CLOSE Side Then Top Latch"
+                    },
+                    {
+                        "name": "If both upper and side latches are open, the door will trall slightly open and airspeeds will be reduced slightly.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "ENGINE ROUGHNESS",
+                "actions": [
+                    {
+                        "name": "ALTERNATE AIR",
+                        "action": "OPEN"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If roughness continues after one minute:",
+                        "action": ""
+                    },
+                    {
+                        "name": "MIXTURE",
+                        "action": "Adjust for Maximum Smoothness"
+                    },
+                    {
+                        "name": "ALTERNATE AIR",
+                        "action": "CLOSE"
+                    },
+                    {
+                        "name": "FUEL PUMP",
+                        "action": "ON"
+                    },
+                    {
+                        "name": "Fuel Selector",
+                        "action": "SWITCH TANKS"
+                    },
+                    {
+                        "name": "Engine Indicatiors",
+                        "action": "CHECK"
+                    },
+                    {
+                        "name": "LEFT/RIGHT MAG Switches",
+                        "action": "Individually Select OFF and ON"
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If operation of satisfactory on either MAG, continue on that magneto at reduced power and full RICH mixture to nearest airport.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "Prepare for power-off landing.",
+                        "action": ""
+                    },
+                    {
+                        "name": "If possible, always retain glide capability to the selected landing area in case of total engine failure.",
+                        "action": ""
+                    }
+                ]
+            },
+            {
+                "title": "CARBON MONOXIDE CAS INDICATIONS",
+                "actions": [
+                    {
+                        "name": "Indications: Master Warning, Triple Chime, CO LVL HIGH",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If the CO Detector Warning or Caution activates in flight:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Press the CO RST softkey (on the engine page) to reset the CO Detector.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "If the Warning or Caution continues:",
+                        "action": ""
+                    },
+                    {
+                        "name": "Shut off the heater, air conditioning or any other opening to the engine compartment.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Open a fresh air source immediately. Don't smoke.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Land as soon as possible.",
+                        "action": ""
+                    },
+                    {
+                        "name": "Be sure the source of the contamination is corrected before further flight.",
+                        "action": ""
+                    },
+                    {
+                        "name": "",
+                        "action": ""
+                    },
+                    {
+                        "name": "The Amber MFD alert will remain until the CO level drops below 50 parts per million (PPM) by volume of carbon monoxide concentration. Do not recycle the unit through the circuit breaker. A three-minute delay is required for the CO sensor to stabalize after each power-up.",
+                        "action": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
