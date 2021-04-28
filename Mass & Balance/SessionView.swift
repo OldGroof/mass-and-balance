@@ -771,9 +771,7 @@ struct SessionView: View {
                     }
                 }
             } // Landing Details
-            if entity.altMss == entity.tom {
-                // Nothing to show
-            } else {
+            if entity.altICAO != "" {
                 Section() {
                     HStack{
                         Image(systemName: "c.circle")
