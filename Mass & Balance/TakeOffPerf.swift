@@ -7,44 +7,11 @@
 
 import SwiftUI
 
-class SelectedAirport {
+struct SelectedAirport {
     var icao: String?
     var name: String?
     var elevation: Int?
     var runways: [Runway]?
-    
-    class Runway {
-        var name: String?
-        var bearing: Int?
-        var slope: Float?
-        var tora: Int?
-        var toda: Int?
-        var asda: Int?
-        var lda: Int?
-        
-        var intx: [intersect]?
-        
-        class intersect {
-            var name: String?
-            var adjust: Int?
-            
-            init(name: String? = nil, adjust: Int? = nil) {
-                self.name = name
-                self.adjust = adjust
-            }
-        }
-        
-        init(name: String? = nil, bearing: Int? = nil, slope: Float? = nil, tora: Int? = nil, toda: Int? = nil, asda: Int? = nil, lda: Int? = nil, intx: [intersect]? = nil) {
-            self.name = name
-            self.bearing = bearing
-            self.slope = slope
-            self.tora = tora
-            self.toda = toda
-            self.asda = asda
-            self.lda = lda
-            self.intx = intx
-        }
-    }
     
     init(icao: String? = nil, name: String? = nil, elevation: Int? = nil, runways: [Runway]? = nil) {
         self.icao = icao
@@ -62,6 +29,8 @@ struct TakeOffPerf: View {
     
     @State var selAirport = SelectedAirport()
     
+    @State var rwySelected = ""
+    
     var body: some View {
         Form {
             Section() {
@@ -72,20 +41,35 @@ struct TakeOffPerf: View {
                     Menu {
                         ForEach(airports.json) { airport in
                             Button(action: {
-                                selAirport = SelectedAirport(icao: airport.icao, name: airport.name, elevation: airport.elevation)
-                                print(selAirport.icao!)
-                                SetData()
+                                selAirport = SelectedAirport(icao: airport.icao, name: airport.name, elevation: airport.elevation, runways: airport.runways)
+                                performance.elevDep = String(selAirport.elevation ?? 0)
+                                performance.tora = ""
+                                performance.toda = ""
+                                performance.asda = ""
+                                rwySelected = ""
                             }) {
                                 Text("\(airport.icao) - \(airport.name)")
                             }
                         }
+                        Button(action: {
+                            selAirport = SelectedAirport()
+                            performance.elevDep = String(selAirport.elevation ?? 0)
+                            performance.tora = ""
+                            performance.toda = ""
+                            performance.asda = ""
+                            rwySelected = ""
+                        }) {
+                            Text("Clear")
+                        }
                     } label: {
                         if selAirport.icao == nil {
                             Text("Select Airport")
+                                .frame(width: 200, alignment: .trailing)
                         } else {
                             Text("\(selAirport.icao ?? "") - \(selAirport.name ?? "")")
+                                .frame(width: 200, alignment: .trailing)
                         }
-                    }
+                    }.frame(width: 200, alignment: .trailing)
                 }
                 if selAirport.icao == nil {
                     
@@ -93,13 +77,26 @@ struct TakeOffPerf: View {
                     HStack {
                         Text("Runway")
                         Spacer()
-                        Menu("Select Runway") {
-                            Button(action: {
-                                print(selAirport.name!)
-                            }) {
-                                Text("Test")
+                        Menu {
+                            ForEach(selAirport.runways!) { runway in
+                                Button(action: {
+                                    rwySelected = runway.name
+                                    performance.tora = String(runway.tora)
+                                    performance.toda = String(runway.toda)
+                                    performance.asda = String(runway.asda)
+                                }) {
+                                    Text(runway.name)
+                                }
                             }
-                        }
+                        } label: {
+                            if rwySelected == "" {
+                                Text("Select Runway")
+                                    .frame(width: 150, alignment: .trailing)
+                            } else {
+                                Text("Runway \(rwySelected)")
+                                    .frame(width: 150, alignment: .trailing)
+                            }
+                        }.frame(width: 150, alignment: .trailing)
                     }
                 }
             }
@@ -410,9 +407,5 @@ struct TakeOffPerf: View {
             }
         }.listStyle(InsetGroupedListStyle())
         .navigationBarTitle("Take off Performance")
-    }
-    
-    func SetData() {
-        performance.elevDep = String(selAirport.elevation ?? 0)
     }
 }

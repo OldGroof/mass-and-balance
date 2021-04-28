@@ -230,39 +230,37 @@ class Airport: Codable, Identifiable, ObservableObject {
     var name: String
     var elevation: Int
     var runways: [Runway]
-    
-    class Runway: Codable, Identifiable, ObservableObject {
-        enum CodingKeys: CodingKey {
-            case name
-            case bearing
-            case slope
-            case tora
-            case toda
-            case asda
-            case lda
-            case intx
-        }
-        var id = UUID()
-        var name: String
-        var bearing: Int
-        var slope: Float
-        var tora: Int
-        var toda: Int
-        var asda: Int
-        var lda: Int
-        
-        var intx: [intersect]
-        
-        class intersect: Codable, Identifiable, ObservableObject {
-            enum CodingKeys: CodingKey {
-                case name
-                case adjust
-            }
-            var id = UUID()
-            var name: String
-            var adjust: Int
-        }
+}
+class Runway: Codable, Identifiable, ObservableObject {
+    enum CodingKeys: CodingKey {
+        case name
+        case bearing
+        case slope
+        case tora
+        case toda
+        case asda
+        case lda
+        case intx
     }
+    var id = UUID()
+    var name: String
+    var bearing: Int
+    var slope: Float
+    var tora: Int
+    var toda: Int
+    var asda: Int
+    var lda: Int
+    
+    var intx: [intersect]
+}
+class intersect: Codable, Identifiable, ObservableObject {
+    enum CodingKeys: CodingKey {
+        case name
+        case adjust
+    }
+    var id = UUID()
+    var name: String
+    var adjust: Int
 }
 
 class LoadAirport: ObservableObject {
