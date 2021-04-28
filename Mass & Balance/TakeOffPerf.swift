@@ -60,9 +60,6 @@ struct TakeOffPerf: View {
     @ObservedObject var performance: Calculations
     @ObservedObject var settings = Settings()
     
-    @State var icao = ""
-    @State var name = ""
-    @State var elevation = 0
     @State var selAirport = SelectedAirport()
     
     var body: some View {
@@ -83,14 +80,14 @@ struct TakeOffPerf: View {
                             }
                         }
                     } label: {
-                        if selAirport == nil {
+                        if selAirport.icao == nil {
                             Text("Select Airport")
                         } else {
                             Text("\(selAirport.icao ?? "") - \(selAirport.name ?? "")")
                         }
                     }
                 }
-                if selAirport == nil {
+                if selAirport.icao == nil {
                     
                 } else {
                     HStack {
