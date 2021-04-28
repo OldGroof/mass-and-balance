@@ -83,14 +83,14 @@ struct TakeOffPerf: View {
                             }
                         }
                     } label: {
-                        if selAirport.icao == nil {
+                        if selAirport == nil {
                             Text("Select Airport")
                         } else {
                             Text("\(selAirport.icao ?? "") - \(selAirport.name ?? "")")
                         }
                     }
                 }
-                if selAirport.icao == "" {
+                if selAirport == nil {
                     
                 } else {
                     HStack {
