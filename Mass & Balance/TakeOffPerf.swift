@@ -21,6 +21,28 @@ struct SelectedAirport {
     }
 }
 
+struct SelectedRunway {
+    var name: String?
+    var bearing: Int?
+    var slope: Float?
+    var tora: Int?
+    var toda: Int?
+    var asda: Int?
+    var lda: Int?
+    
+    var intx: [intersect]?
+    
+    init(name: String? = nil, bearing: Int? = nil, slope: Float? = nil, tora: Int? = nil, toda: Int? = nil, asda: Int? = nil, lda: Int? = nil) {
+        self.name = name
+        self.bearing = bearing
+        self.slope = slope
+        self.tora = tora
+        self.toda = toda
+        self.asda = asda
+        self.lda = lda
+    }
+}
+
 
 struct TakeOffPerf: View {
     @ObservedObject var airports = LoadAirport()
@@ -28,8 +50,7 @@ struct TakeOffPerf: View {
     @ObservedObject var settings = Settings()
     
     @State var selAirport = SelectedAirport()
-    
-    @State var rwySelected = ""
+    @State var selRunway = SelectedRunway()
     
     var body: some View {
         Form {
@@ -42,22 +63,22 @@ struct TakeOffPerf: View {
                         ForEach(airports.json) { airport in
                             Button(action: {
                                 selAirport = SelectedAirport(icao: airport.icao, name: airport.name, elevation: airport.elevation, runways: airport.runways)
+                                selRunway = SelectedRunway()
                                 performance.elevDep = String(selAirport.elevation ?? 0)
                                 performance.tora = ""
                                 performance.toda = ""
                                 performance.asda = ""
-                                rwySelected = ""
                             }) {
                                 Text("\(airport.icao) - \(airport.name)")
                             }
                         }
                         Button(action: {
                             selAirport = SelectedAirport()
+                            selRunway = SelectedRunway()
                             performance.elevDep = String(selAirport.elevation ?? 0)
                             performance.tora = ""
                             performance.toda = ""
                             performance.asda = ""
-                            rwySelected = ""
                         }) {
                             Text("Clear")
                         }
@@ -71,32 +92,42 @@ struct TakeOffPerf: View {
                         }
                     }.frame(width: 200, alignment: .trailing)
                 }
-                if selAirport.icao == nil {
-                    
-                } else {
+                if selAirport.icao != nil {
                     HStack {
                         Text("Runway")
                         Spacer()
                         Menu {
                             ForEach(selAirport.runways!) { runway in
                                 Button(action: {
-                                    rwySelected = runway.name
+                                    selRunway = SelectedRunway(name: runway.name, bearing: runway.bearing)
                                     performance.tora = String(runway.tora)
                                     performance.toda = String(runway.toda)
                                     performance.asda = String(runway.asda)
+                                    if runway.intx!.count > 0 {
+                                        print(runway.intx![0].name)
+                                    } else {
+                                        print("No intersections available.")
+                                    }
                                 }) {
                                     Text(runway.name)
                                 }
                             }
                         } label: {
-                            if rwySelected == "" {
+                            if selRunway.name == "" {
                                 Text("Select Runway")
                                     .frame(width: 150, alignment: .trailing)
                             } else {
-                                Text("Runway \(rwySelected)")
+                                Text("Runway \(selRunway.name ?? "")")
                                     .frame(width: 150, alignment: .trailing)
                             }
                         }.frame(width: 150, alignment: .trailing)
+                    }
+                }
+                if selRunway.intx != nil {
+                    HStack {
+                        Text("Intersection")
+                        Spacer()
+                        Text("Placeholder for now")
                     }
                 }
             }

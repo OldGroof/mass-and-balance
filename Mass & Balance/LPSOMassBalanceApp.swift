@@ -251,7 +251,7 @@ class Runway: Codable, Identifiable, ObservableObject {
     var asda: Int
     var lda: Int
     
-    var intx: [intersect]
+    var intx: [intersect]?
 }
 class intersect: Codable, Identifiable, ObservableObject {
     enum CodingKeys: CodingKey {
