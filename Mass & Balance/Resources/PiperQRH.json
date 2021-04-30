@@ -476,7 +476,7 @@
                         "action": "RESET If Tripped"
                     },
                     {
-                        "name": "ALTR FIElD Circuit Breaker (Row 2, Col. 13)",
+                        "name": "ALTR FIELD Circuit Breaker (Row 2, Col. 13)",
                         "action": "RESET"
                     },
                     {
@@ -676,7 +676,7 @@
                         "action": ""
                     },
                     {
-                        "name": "If the PFD fails, the MFD will remain in normal mode. Pushing the DISPLAY BACKUP button on the audio panel allows the MFD to display ADAHRS informatino but lose the EIS page and certain map functions. The following features will become inoperative if there is a complete loss of PFD functionality: Autopilot, COM1 (yellow x'd but 121.5 MHz remains available), NAV1, GPS1, Traffic",
+                        "name": "If the PFD fails, the MFD will remain in normal mode. Pushing the DISPLAY BACKUP button on the audio panel allows the MFD to display ADAHRS information but lose the EIS page and certain map functions. The following features will become inoperative if there is a complete loss of PFD functionality: Autopilot, COM1 (yellow x'd but 121.5 MHz remains available), NAV1, GPS1, Traffic",
                         "action": ""
                     },
                     {
@@ -894,7 +894,7 @@
                 "title": "COM 1 AND COM 2 FAILURE",
                 "actions": [
                     {
-                        "name": "Indication: inability to communicate/receive on Com1 and COM2",
+                        "name": "Indication: inability to communicate/receive on COM1 and COM2",
                         "action": ""
                     },
                     {
@@ -902,7 +902,7 @@
                         "action": ""
                     },
                     {
-                        "name": "If power is lost to the audio panel a fail-safe communications path becomes available between the pilot's headset/microphon and COM1.",
+                        "name": "If power is lost to the audio panel a fail-safe communications path becomes available between the pilot's headset/microphone and COM1.",
                         "action": ""
                     },
                     {
@@ -919,7 +919,7 @@
                 "title": "DUAL GPS FAILURE",
                 "actions": [
                     {
-                        "name": "Indication: Amber 'DR' annunciation on HIS, Amber 'DR' superimposed over airplane symbol on moving map.",
+                        "name": "Indication: Amber 'DR' annunciation on HSI, Amber 'DR' superimposed over airplane symbol on moving map.",
                         "action": ""
                     },
                     {
@@ -935,7 +935,7 @@
                         "action": ""
                     },
                     {
-                        "name": "Dead Reckoning (DR) Mode - Active whe nthe airplane is greater than 30 NM from the destination airport in flightplan.",
+                        "name": "Dead Reckoning (DR) Mode - Active when the airplane is greater than 30 NM from the destination airport in flightplan.",
                         "action": ""
                     },
                     {
