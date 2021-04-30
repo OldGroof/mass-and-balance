@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		320145B72635F9B20010E18C /* airportData.json in Resources */ = {isa = PBXBuildFile; fileRef = 320145B62635F9B20010E18C /* airportData.json */; };
-		32066AB72554EE5600210687 /* aircraftData.json in Resources */ = {isa = PBXBuildFile; fileRef = 32066AB62554EE5600210687 /* aircraftData.json */; };
+		32066AB72554EE5600210687 /* PonteDeSorAircraftData.json in Resources */ = {isa = PBXBuildFile; fileRef = 32066AB62554EE5600210687 /* PonteDeSorAircraftData.json */; };
 		321C82C72557063100B5EF09 /* MassTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C82C62557063100B5EF09 /* MassTable.swift */; };
 		322D04BD25A8C74D001EAE6B /* AlternatePerf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D04BC25A8C74D001EAE6B /* AlternatePerf.swift */; };
 		327B995325533CDD001F979A /* LPSOMassBalanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327B995225533CDD001F979A /* LPSOMassBalanceApp.swift */; };
@@ -22,11 +22,12 @@
 		32D02D132562F93400939745 /* LandingPerf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D02D122562F93400939745 /* LandingPerf.swift */; };
 		32D283AA25AA80AC00583692 /* CheckLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D283A925AA80AC00583692 /* CheckLists.swift */; };
 		32D47FB925542B760060508F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D47FB825542B760060508F /* Home.swift */; };
+		32F73488263C609E007CBF4B /* CranfieldAircraftData.json in Resources */ = {isa = PBXBuildFile; fileRef = 32F73487263C609E007CBF4B /* CranfieldAircraftData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		320145B62635F9B20010E18C /* airportData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airportData.json; sourceTree = "<group>"; };
-		32066AB62554EE5600210687 /* aircraftData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = aircraftData.json; sourceTree = "<group>"; };
+		32066AB62554EE5600210687 /* PonteDeSorAircraftData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PonteDeSorAircraftData.json; sourceTree = "<group>"; };
 		321C82C62557063100B5EF09 /* MassTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassTable.swift; sourceTree = "<group>"; };
 		322D04BC25A8C74D001EAE6B /* AlternatePerf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternatePerf.swift; sourceTree = "<group>"; };
 		327B994F25533CDD001F979A /* Mass & Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mass & Balance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +43,7 @@
 		32D02D122562F93400939745 /* LandingPerf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPerf.swift; sourceTree = "<group>"; };
 		32D283A925AA80AC00583692 /* CheckLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLists.swift; sourceTree = "<group>"; };
 		32D47FB825542B760060508F /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		32F73487263C609E007CBF4B /* CranfieldAircraftData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CranfieldAircraftData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				327B995625533CDD001F979A /* Assets.xcassets */,
 				32B4640C25659C1100223FBA /* MassAndBalance.xcdatamodeld */,
-				32066AB62554EE5600210687 /* aircraftData.json */,
+				32066AB62554EE5600210687 /* PonteDeSorAircraftData.json */,
+				32F73487263C609E007CBF4B /* CranfieldAircraftData.json */,
 				320145B62635F9B20010E18C /* airportData.json */,
 				32C89D2D25ABC9F3001BEE9F /* PiperQRH.json */,
 				32C89D3125ABEF78001BEE9F /* PiperChecklist.json */,
@@ -159,11 +162,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F73488263C609E007CBF4B /* CranfieldAircraftData.json in Resources */,
 				327B995725533CDD001F979A /* Assets.xcassets in Resources */,
 				320145B72635F9B20010E18C /* airportData.json in Resources */,
 				32C89D3225ABEF78001BEE9F /* PiperChecklist.json in Resources */,
 				32C89D2E25ABC9F3001BEE9F /* PiperQRH.json in Resources */,
-				32066AB72554EE5600210687 /* aircraftData.json in Resources */,
+				32066AB72554EE5600210687 /* PonteDeSorAircraftData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

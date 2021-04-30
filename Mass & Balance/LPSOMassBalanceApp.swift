@@ -85,7 +85,7 @@ class Json: ObservableObject {
     }
     
     func load() {
-        let path = Bundle.main.path(forResource: "aircraftData", ofType: "json")
+        let path = Bundle.main.path(forResource: "CranfieldAircraftData", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
